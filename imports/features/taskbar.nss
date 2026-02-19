@@ -1,6 +1,5 @@
 menu(type="taskbar" vis=key.shift() or key.lbutton() pos=0 title=app.name image=\uE249)
 {
-  
 	item(title="manager" image=\uE0F3 admin cmd='"@app.exe"')
 	item(title="directory" image=\uE0E8 cmd='"@app.dir"')
 	item(title="version\t"+@app.ver vis=label col=1)
