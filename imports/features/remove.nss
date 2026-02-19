@@ -1,4 +1,3 @@
-
 remove(find="Notepad++|Foobar|VLC")
 remove(find="new|copy|cut|delete|paste|undo")
 remove(find="Always keep on this device|Free up space|Manage access|View online|Version history|Different User") 
