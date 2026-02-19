@@ -1,5 +1,3 @@
-$envLoaded = true
-
 $dpi = reg.get('HKCU\Control Panel\Desktop','LogPixels')
 $displayScale = if(dpi==0,96,dpi)/96
 
