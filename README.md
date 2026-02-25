@@ -4,12 +4,12 @@
 ## Structure
 - imports/core → environment, icons, theme
 - imports/features → actual menu features
-- imports/modules → imported directly to features
+- imports/features/modules → imported directly into features
 
 ## Install
 1. Copy files into your Nilesoft Shell config folder
 2. Replace your existing shell.nss
-3. Restart Explorer / CTRL+RMB
+3. Restart Explorer / `CTRL`+`Right-Click`
 
 ## Notes
 - Nilesoft Shell Webpage - **https://nilesoft.org/**
