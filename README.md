@@ -15,3 +15,4 @@
 - Nilesoft Shell Webpage - **https://nilesoft.org/**
 - Tested on Canary - **https://nilesoft.org/download/shell/shell-canary.zip**
 - Since I've removed the donation link from the taskbar - **https://nilesoft.org/donate**
+- This config is what I personally use, there are some items you probably want to edit or delete.
