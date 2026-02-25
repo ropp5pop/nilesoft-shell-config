@@ -17,8 +17,8 @@ menu(mode="multiple" title="Pin/Unpin" image=icon.pin vis=mkeySC)
 // New menu - Manage
 menu(where=sel.count>0 type='file|dir|drive|namespace|back' mode="multiple" title='Manage' image=\uE253 sep=none)
 {
-  import '..\modules\path.nss' 
-  import '..\modules\terminal.nss'
+  import 'modules\path.nss' 
+  import 'modules\terminal.nss'
   separator   
   item(type='file|dir|back.dir|drive' title='Take Ownership' image=[\uE194,#f00] admin vis=mkeyANY
     cmd args='/K takeown /f "@sel.path" @if(sel.type==1,null,"/r /d y") && icacls "@sel.path" /grant *S-1-5-32-544:F @if(sel.type==1,"/c /l","/t /c /l /q")')
@@ -28,7 +28,7 @@ menu(where=sel.count>0 type='file|dir|drive|namespace|back' mode="multiple" titl
 menu(mode="multiple" title=title.more_options image=icon.more_options sep=above)
 {
 }
-import '..\modules\7zip.nss'
+import 'modules\7zip.nss'
 
 // New menu - New
 menu(mode="single" type='back' title='New'  image=[\uE17A, #22A7F2] sep=after)
