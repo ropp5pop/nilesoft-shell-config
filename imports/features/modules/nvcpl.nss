@@ -3,5 +3,5 @@ item(
 	image=@($mkeyANY ? [\UE29A, Red] : icon.nvidia)
 	tip=@($mkeyANY ? "Force STOP NVIDIA Service" : "Open Panel (Auto-starts service if needed)")
 	cmd='powershell.exe' 
-	args='-ExecutionPolicy Bypass -WindowStyle Hidden -File "@app.dir\imports\features\modules\nvcnt.ps1" @($mkeyANY ? "Stop" : "Start")'
+	args='-ExecutionPolicy Bypass -WindowStyle Hidden -File "' + $nvcnt + '" @($mkeyANY ? "Stop" : "Start")'
 )
