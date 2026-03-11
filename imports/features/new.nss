@@ -45,8 +45,6 @@ menu(mode="single" type='back' title='New'  image=[\uE17A, LightBlue] sep=after)
 // New menu - Display
 menu(mode="single" type='desktop' title='Display' pos="9" image=[\uE203, Green] sep=before)
 {
-  item(title='NVCleanstall'		image cmd='D:\Progam Portable\System Apps\Nvidia\NVCleanstall_1.19.0.exe' args='"@sel.path"')
-  item(title='NVControlPanel'	image cmd='C:\Program Files\WindowsApps\NVIDIACorp.NVIDIAControlPanel_8.1.968.0_x64__56jybvy8sckqj\nvcplui.exe'	args='"@sel.path"' pos=bottom)
   import mods + 'nvcpl.nss'
 }
 

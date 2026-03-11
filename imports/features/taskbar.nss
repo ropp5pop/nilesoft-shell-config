@@ -1,4 +1,4 @@
-menu(type="taskbar" vis=key.shift() or key.lbutton() pos=0 title=app.name image=\uE249)
+menu(type="taskbar" vis=($mkeyANY || key.lbutton()) pos=0 title=app.name image=\uE249)
 {
 	item(title="manager" image=\uE0F3 admin cmd='"@app.exe"')
 	item(title="directory" image=\uE0E8 cmd='"@app.dir"')
@@ -7,7 +7,7 @@ menu(type="taskbar" vis=key.shift() or key.lbutton() pos=0 title=app.name image=
 }
 menu(where=@(this.count == 0) type="taskbar" image=icon.settings expanded=true)
 {
-	menu(title='Windows' image=\uE1FB)
+	menu(title='Windows' image=\uE1FB vis=$mkeyNONE)
 	{
 		item(title='cascade_windows' cmd=command.cascade_windows)
 		item(title='Show_windows_stacked' cmd=command.Show_windows_stacked)
@@ -19,5 +19,5 @@ menu(where=@(this.count == 0) type="taskbar" image=icon.settings expanded=true)
 	item(title=title.desktop image=icon.desktop cmd=command.toggle_desktop)
 	item(title='Task Manager' sep=both image=icon.task_manager cmd='taskmgr.exe')
 	item(title='Taskbar Settings' sep=both image=inherit cmd='ms-settings:taskbar')
-	item(title="Restart Explorer" cmd=command.restart_explorer vis=key.control() or key.shift() sep=before image=#BB2233)
+	item(title="Restart Explorer" cmd=command.restart_explorer vis=$mkeySC sep=before image=#BB2233)
 }
