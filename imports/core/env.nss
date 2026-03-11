@@ -12,12 +12,12 @@ $finalScale = $displayScale * $textScaleFactor
 $core = 'imports\core\'
 $feat = 'imports\features\'
 $mods = '@app.dir\imports\features\modules\'
-$nvcnt = $mods + 'nvcnt.ps1'
-
+$nvcnt = $mods + 'scripts\nvcnt.ps1'
 
 // --- .key .sys ---
 $mkeyANY = key.shift() or key.control()
 $mkeySC = key.shift() and key.control()
+$mkeyNONE = key == key(key.shift, key.control, key.lbutton)
 
 $dt = sys.datetime("ymd_HM")
 
