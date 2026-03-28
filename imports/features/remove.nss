@@ -1,8 +1,7 @@
-remove(find="Notepad++|Foobar|VLC")
+remove(find="Foobar|OneDrive|Powershell")
 remove(find="new|copy|cut|delete|paste|undo")
-remove(find="Always keep on this device|Free up space|Manage access|View online|Version history|Different User") 
-remove(type="file" find="Add to Favorites") 
-remove(find='OneDrive|Sync or Backup')
+remove(find="Always keep on this device|Free up space|Manage access|View online|Version history|Different User|Sync or Backup|Add to Favorites") 
+
 remove(mode=mode.multiple
 	where=this.id(
 		id.create_shortcut,
@@ -16,11 +15,9 @@ remove(mode=mode.multiple
 		id.move_to_folder,
     id.include_in_library,
     id.give_access_to,
-    id.customize_this_folder
+    id.customize_this_folder,
+		id.open,
+		id.play,
+		id.edit
 	)
 )
-
-remove(where=this.id==id.open image=image.default)
-remove(where=this.id==id.play image=image.default)
-remove(where=this.id==id.Edit image=image.default)
-remove(find="Powershell")
