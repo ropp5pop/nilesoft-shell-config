@@ -23,5 +23,4 @@ remove(mode=mode.multiple
 remove(where=this.id==id.open image=image.default)
 remove(where=this.id==id.play image=image.default)
 remove(where=this.id==id.Edit image=image.default)
-remove(clsid='{9F156763-7844-4DC4-B2B1-901F640F5155}|{02DB545A-3E20-46DE-83A5-1329B1E88B6B}') // Open in Windows Terminal; Open in Terminal
 remove(find="Powershell")
