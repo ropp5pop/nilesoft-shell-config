@@ -50,5 +50,7 @@ You can use the `Data` field to describe what you're blocking in plain text.
 
 ### Links
 Nilesoft Shell Webpage - **https://nilesoft.org/**
+
 Since I've removed the donation link from the taskbar - **https://nilesoft.org/donate**
+
 Nilesoft Shell Snippets - **https://github.com/RubicBG/Nilesoft-Shell-Snippets**
