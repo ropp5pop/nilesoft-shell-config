@@ -1,9 +1,9 @@
 item(
   where=package.exists("NVIDIACorp.NVIDIAControlPanel")
-  title=@($mkeyANYRMB ? 'NVCPL - Stop Service' : 'NVIDIA Control Panel')
-  image=@($mkeyANYRMB ? [\UE29A, Red] : icon.nvidia)
-  tip=["Stop NVIDIA Container Service " +tipANYRMB, tip.warning, 1.0]
+  title=@(mkeyANYM2 ? 'NVCPL - Stop Service' : 'NVIDIA Control Panel')
+  image=@(mkeyANYM2 ? [\UE29A, Red] : icon.nvidia)
+  tip=["Stop NVIDIA Container Service " +tipANYM2, tip.warning, 1.0]
   cmd='powershell.exe' 
-  args='-ExecutionPolicy Bypass -WindowStyle Hidden -File "' + $nvcnt + '" @($mkeyANYRMB ? "Stop" : "Start")'
+  args='-ExecutionPolicy Bypass -WindowStyle Hidden -File "' + $nvcnt + '" @(mkeyANYM2 ? "Stop" : "Start")'
   pos=bottom
 )

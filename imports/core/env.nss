@@ -1,31 +1,31 @@
 // Globals
 // Scaling
 $dpi = reg.get('HKCU\Control Panel\Desktop','LogPixels')
-$displayScale = if(dpi==0,96,dpi)/96
+$dScale = if(dpi==0,96,dpi)/96
 
-$textScale = reg.get('HKCU\Software\Microsoft\Accessibility','TextScaleFactor')
-$textScaleFix = if(textScale==0,100,textScale)
-$textScaleFactor = $textScaleFix/100
+$tScale = reg.get('HKCU\Software\Microsoft\Accessibility','TextScaleFactor')
+$tScaleFx = if(tScale==0,100,tScale)/100
 
-$finalScale = $displayScale * $textScaleFactor
+$fScale = $dScale * $tScaleFx
 
 // Paths
-$core = 'imports\core\'
-$feat = 'imports\features\'
-$mods = '@app.dir\imports\features\modules\'
-$nvcnt = $mods + 'scripts\nvcnt.ps1'
+$core   = '@app.dir\imports\core\'
+$feat   = '@app.dir\imports\features\'
+$mods   = '@app.dir\imports\features\modules\'
+$nvcnt  = $mods + 'scripts\nvcnt.ps1'
 
 // Keys
-$mkeyANY = keys.shift() or keys.control()
-$mkeyANYRMB = ($mkeyANY || key.rbutton())
-$mkeySC = key.shift() and key.control()
-$mkeyNONE = key == key(key.shift, key.control, key.lbutton)
+$mkeyANY    = key.shift() || key.control()
+$mkeyANYM1  = ($mkeyANY || key.lbutton())
+$mkeyANYM2  = ($mkeyANY || key.rbutton())
+$mkeySC     = key.shift() && key.control()
+$mkeyNONE   =! ($mkeyANY || key.lbutton())
 
 // Tooltip
-$tipANYRMB = "(SHIFT/CTRL/RIGHT-CLICK)"
-$tipADMIN = ["Administrator + " + tipANYRMB, tip.warning, 1.0]
+$tipANYM2 = "(SHIFT/CTRL/RIGHT-CLICK)"
+$tipADMIN = ["Administrator + " + tipANYM2, tip.warning, 1.0]
 
-// Tooltip
+// Misc
 $dt = sys.datetime("ymd_HM")
 
 // Colors
