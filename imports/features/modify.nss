@@ -1,4 +1,4 @@
-modify(mode=mode.multiple
+modify(mode=mode.multiple vis=mkeyANY
 	where=this.id(
 		id.cast_to_device,
 		id.set_as_desktop_background,
