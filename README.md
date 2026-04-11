@@ -27,7 +27,7 @@ The `remove` item and `vis=disable` property only hides the entry.
 
 ##### GUID Keys Detection
 1. Select the desired object(s) you want to analyze
-2. Hold `Alt` and right-click
+2. Hold `Alt` and `Right-Click`
 3. Check `shell.log` for timing results
 
 ##### GUID Keys Registry Locations:
@@ -36,11 +36,12 @@ The `remove` item and `vis=disable` property only hides the entry.
 
 ##### GUID Keys Block:
 - Location: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked`
-(If not already present, create a new key named `Blocked`)
+  (If not already present, create a new key named `Blocked`)
 
-- Add a new `String Value` (REG_SZ) and name it with GUID in brackets:
-`{8BCF599D-B158-450F-B4C2-430932F2AF2F}`.
-You can use the `Data` field to describe what you're blocking in plain text.
+- Add a new `String Value` (REG_SZ) and name it with GUID in brackets.
+  *Example: `{8BCF599D-B158-450F-B4C2-430932F2AF2F}`*
+
+- Use the `Data` field to describe what you're blocking in plain text.
 
 **Related information:** [Nilesoft-Shell-Snippets/ext.nilesoft/nss.disabler.tut.md](https://github.com/RubicBG/Nilesoft-Shell-Snippets/blob/main/ext.nilesoft/nss.disabler.tut.md)
 
