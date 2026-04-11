@@ -19,7 +19,6 @@ $mkeyANY    = key.shift() || key.control()
 $mkeyANYM1  = ($mkeyANY || key.lbutton())
 $mkeyANYM2  = ($mkeyANY || key.rbutton())
 $mkeySC     = key.shift() && key.control()
-$mkeyNONE   =! ($mkeyANY || key.lbutton())
 
 // Tooltip
 $tipANYM2 = "(SHIFT/CTRL/RIGHT-CLICK)"
