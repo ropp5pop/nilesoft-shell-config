@@ -1,5 +1,5 @@
 remove(find="OneDrive|Powershell")
-remove(find="new|copy|cut|delete|paste")
+remove(find="new|copy|cut|delete|paste|undo|redo")
 remove(find="Always keep*|Free up space|View online|Version history|Different User|Sync or Backup|Favorites") 
 
 remove(mode=mode.multiple
@@ -19,7 +19,6 @@ remove(mode=mode.multiple
     id.restore,
     id.restore_previous_versions,
     id.set_as_desktop_background,
-    id.share,
-    id.undo
+    id.share
   )
 )
