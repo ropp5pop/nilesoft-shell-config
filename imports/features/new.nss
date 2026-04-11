@@ -31,7 +31,7 @@ menu(mode="multiple" title=title.more_options image=icon.more_options sep=above)
 }
 
 // New menu - New
-menu(mode="single" type='back' title='New'  image=[\uE17A, LightBlue] sep=after)
+menu(mode="single" type='back' title='New'  image=[\uE17A, LightBlue] sep=after vis=!mkeyANYM1)
 {
   item(title='Folder (ymd_HM)'  cmd=io.dir.create('@(dt)')  image=icon.new_folder)
   sep
