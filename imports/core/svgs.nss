@@ -1,10 +1,3 @@
-$RR	= #FF0000
-$GG	= #00FF00
-$BB	= #0000FF
-$Red2				= #BB2233
-$LightBlue2	= #4cc2ff
-$Green2			= #338822
-
 // Basic Shapes
 $svg_sq16='<svg fill="none" viewBox="0 0 16 16">
 	<path fill="@image.color2" d="M16 16H0V0H16Z" />
