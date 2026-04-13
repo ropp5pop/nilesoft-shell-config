@@ -33,4 +33,4 @@ modify(find='Personalize' menu="Display" sep=after)
 modify(where=this.name=='display settings' menu="Display")
 
 // Run as Admin
-modify(find='Run as Administrator' where=!(@sel.file.ext == '.exe' or @sel.file.ext == '.lnk') vis=Hidden)
+modify(find='Run as Administrator' where=!str.contains('.exe|.lnk|.bat|.msi|.ps1', @sel.file.ext) vis=Hidden)
