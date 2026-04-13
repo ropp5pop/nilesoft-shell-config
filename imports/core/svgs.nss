@@ -1,42 +1,35 @@
 // Basic Shapes
-@svg_sq16='<svg fill="none" viewBox="0 0 16 16">
-	<path fill="#4cc2ff" d="M16 16H0V0H16Z" />
+@svg_sq='<svg fill="none" viewBox="0 0 24 24">
+	<path fill="#ff0000" d="M0 0h24v24H0" />
+	<path fill="#00ff00" d="M2 2h20v20H2z" />
+	<path fill="#0000ff" d="M4 4h16v16H4z" />
+	<path fill="#ffff00" d="M6 6h12v12H6z" />
+	<path fill="#ff00ff" d="M8 8h8v8H8z" />
+	<path fill="#00ffff" d="M10 10h4v4H10z" />
 </svg>'
 
-@svg_sq14='<svg fill="none" viewBox="0 0 16 16">
-	<path fill="#4cc2ff" d="M14 14H2V2H14Z" />
+@svg_sq24='<svg fill="none" viewBox="0 0 24 24">
+	<path fill="#4cc2ff" d="M0 0h24v24H0z" />
 </svg>'
 
-@svg_sq12='<svg fill="none" viewBox="0 0 16 16">
-	<path fill="#4cc2ff" d="M12 12H4V4H12Z" />
+@svg_sq16='<svg fill="none" viewBox="0 0 24 24">
+	<path fill="#4cc2ff" d="M4 4h16v16H4z" />
 </svg>'
 
-@svg_sq='<svg fill="none" viewBox="0 0 16 16">
-	<path fill="#FF0000" d="M16 16H0V0H16Z" />
-	<path fill="#00ff00" d="M14 14H2V2H14Z" />
-	<path fill="#0000ff" d="M12 12H4V4H12Z" />
-	<path fill="#FFFF00" d="M10 10H6V6H10Z" />
+@svg_sq12='<svg fill="none" viewBox="0 0 24 24">
+	<path fill="#4cc2ff" d="M8 8h8v8H8z" />
 </svg>'
 
-@svg_plus='<svg fill="none" viewBox="0 0 16 16">
-	<path fill="#4cc2ff" d="M16 6H10V0H6v6H0v4h6v6h4V10h6z" />
+// Common Shapes
+@svg_plus='<svg viewBox="0 0 24 24">
+	<path fill="#4cc2ff" d="M10 14V24h4V14h10v-4H14V0h-4l-.04 10H0v4" />
 </svg>'
 
-// 7-Zip
-@svg_7z_archive='<svg height="100" width="100" viewBox="0 0 512 512">
+@svg_minus='<svg viewBox="0 0 24 24">
+	<path fill="#4cc2ff" d="M24 14v-4H0v4" />
+</svg>'
+
+@svg_gear='<svg fill="none" viewBox="0 0 24 24">
 	<path fill="#4cc2ff"
-		d="M501.801 213.023H298.977V10.199h-85.954v202.824H10.199v85.954h202.824v202.824h85.954V298.977h202.824z" />
-</svg>'
-
-@svg_7z_extract='<svg height="100" width="100" viewBox="0 0 512 512">
-	<path fill="#4cc2ff" d="M10.199 213.021h491.602v85.959H10.199z" />
-</svg>'
-
-@svg_7z_test='<svg height="100" width="100" viewBox="0 0 512 512">
-	<path fill="#4cc2ff" d="m501.801 120.455-60.754-60.754-271.09 271.089-99.003-99.003-60.755 60.754 159.758 159.758z" />
-</svg>'
-
-@svg_7z_Info='<svg width="100" height="100" viewBox="-160 0 512 512">
-	<path fill="#4cc2ff"
-		d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z" />
+		d="M7.5 12a4.5 4.5 90 109 0 4.5 4.5 90 10-9 0m6.75 0a2.25 2.25 90 11-4.5 0 2.25 2.25 90 114.5 0m4.083-5.808l1.331-.422 1.566 2.71L19 10v4l2.23 1.52-1.566 2.71-2.405-.765-3.154 1.828-.54 2.461H10.44l-.539-2.46-3.155-1.828-2.404.764-1.566-2.71L5 14v-4L2.775 8.48l1.566-2.705 2.404.764L9.9 4.711l.239-1.097.3-1.364h3.127l.534 2.461 3.155 1.828zM9 0L7.936 3.136l-1.584.919L3 3 0 9l2 2v1.919L0 15l3 6 3-1 1.94.869L9 24h6l1.06-3.14 1.584-.92L21 21l3-6-2-2v-2l2-2-3-6-3.356 1.05-1.585-.919L15 0z" />
 </svg>'
