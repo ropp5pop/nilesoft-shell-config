@@ -29,5 +29,5 @@ $dt = sys.datetime("ymd_HM")
 
 // Colors
 $Red        = #BB2233
-$LightBlue  = #22A7F2
+$LightBlue  = #4cc2ff
 $Green      = #338822
