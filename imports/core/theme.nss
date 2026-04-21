@@ -1,40 +1,39 @@
 theme
 {
-  name = 'modern'
-  view = view.compact
-  dark = auto
-  
-  font.size = if(wnd.name == 'SystemTray_Main' || wnd.is_start, 13, 12) * fScale
-  font.name = if(font.exists('Roboto Medium'),'Roboto Medium','Segoe UI')
-  
-  layout.width = 144 * fScale
-  image.align = 2
-  
-  background.color = if(wnd.name == 'SystemTray_Main', #000, #141a22)
-  
-  background
-  {
-    opacity = auto
-    effect  = 0
-  }
-  
-  item
-  {
-    text.normal  = #d0c4bc
-    text.select  = #fff0e6
-    back.select  = #222d3b
-    border.select= #567397
-    padding = [4,2]
-    margin  = 1
-  }
-  
-  border
-  {
-    size = 1
-    color = #404558
-    radius = 0
-  }
-  
-  separator.color = #404558
-  separator.size  = 1
+	name = 'modern'
+	view = view.compact
+	dark = auto
+	
+	font.size = if(sys.is_primary_monitor, 12, 12 * 1.16) * if(wnd.name == 'SystemTray_Main' || wnd.is_start, 1.16, 1.0) * fScale
+	font.name = if(font.exists('Roboto Medium'),'Roboto Medium','Segoe UI')
+	
+	layout.width = 144 * fScale
+	image.align = 2
+	
+	background
+	{
+    color = if(wnd.name == 'SystemTray_Main', #000, #141a22)
+		opacity = auto
+		effect  = 0
+	}
+	
+	item
+	{
+		text.normal  = #d0c4bc
+		text.select  = #fff0e6
+		back.select  = #222d3b
+		border.select= #567397
+		padding = [4,2]
+		margin  = 1
+	}
+	
+	border
+	{
+		size = 1
+		color = #404558
+		radius = 0
+	}
+	
+	separator.color = #404558
+	separator.size  = 1
 }
