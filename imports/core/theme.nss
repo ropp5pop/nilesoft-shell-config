@@ -12,7 +12,7 @@ theme
 	
 	background
 	{
-    color = if(wnd.name == 'SystemTray_Main', #000, #141a22)
+		color = if(wnd.name == 'SystemTray_Main', #000, #141a22)
 		opacity = auto
 		effect  = 0
 	}
