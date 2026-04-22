@@ -19,10 +19,10 @@ theme
   
   item
   {
-    text.normal  = #d0c4bc
-    text.select  = #fff0e6
-    back.select  = #222d3b
-    border.select= #567397
+    text.normal    = #d0c4bc
+    text.select    = #fff0e6
+    back.select    = #222d3b
+    border.select  = #567397
     padding = [4,2]
     margin  = 1
   }
