@@ -12,7 +12,7 @@ theme
   
   background
   {
-    color = if(wnd.name == 'SystemTray_Main', #000, #141a22)
+    color = if(wnd.name == 'SystemTray_Main', #000000, #141a22)
     opacity = auto
     effect  = 0
   }
@@ -27,9 +27,10 @@ theme
     margin  = 1
   }
   
+
   border
   {
-    color		= #404558		
+    color  = if(key.alt(), #bb2233, if($mkeyANYM1, #ffbb22, #404558))
     size 		= 1
     radius	= 0
   }
