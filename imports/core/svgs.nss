@@ -1,13 +1,4 @@
 // Basic Shapes
-@svg_sq='<svg fill="none" viewBox="0 0 24 24">
-	<path fill="#ff0000" d="M0 0h24v24H0" />
-	<path fill="#00ff00" d="M2 2h20v20H2z" />
-	<path fill="#0000ff" d="M4 4h16v16H4z" />
-	<path fill="#ffff00" d="M6 6h12v12H6z" />
-	<path fill="#ff00ff" d="M8 8h8v8H8z" />
-	<path fill="#00ffff" d="M10 10h4v4H10z" />
-</svg>'
-
 @svg_sq24='<svg fill="none" viewBox="0 0 24 24">
 	<path fill="#4cc2ff" d="M0 0h24v24H0z" />
 </svg>'

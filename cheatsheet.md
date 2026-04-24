@@ -1,6 +1,6 @@
 ## **Nilesoft Shell Config - CheatSheet**
 
-Some help for further development. 
+Some help for further development.
 
 ---
 
@@ -35,11 +35,59 @@ Some help for further development.
 ### Snippets
 
 - **env.nss**
-    If this or this:
+  If this or this:
   - `$wScale = if(wnd.name == 'SystemTray_Main' || wnd.is_start, 1.1, 1)`
     <br>
 - **theme.nss**
-    2x if-statements:
+  2x if-statements:
   - `border.color  = if(key.alt(), #bb2233, if($mkeyANYM1, #ffbb22, #404558))`
 
 ---
+
+### SVG
+
+**Squares using path:**
+
+<svg fill="none" width="24" height="24" viewBox="0 0 24 24">
+	<path fill="#ff0000" d="M0 0h24v24H0" />
+	<path fill="#00ff00" d="M2 2h20v20H2z" />
+	<path fill="#0000ff" d="M4 4h16v16H4z" />
+	<path fill="#ffff00" d="M6 6h12v12H6z" />
+	<path fill="#ff00ff" d="M8 8h8v8H8z" />
+	<path fill="#00ffff" d="M10 10h4v4H10z" />
+</svg>
+
+```svg
+@svg_sq='<svg fill="none" viewBox="0 0 24 24">
+	<path fill="#ff0000" d="M0 0h24v24H0" />
+	<path fill="#00ff00" d="M2 2h20v20H2z" />
+	<path fill="#0000ff" d="M4 4h16v16H4z" />
+	<path fill="#ffff00" d="M6 6h12v12H6z" />
+	<path fill="#ff00ff" d="M8 8h8v8H8z" />
+	<path fill="#00ffff" d="M10 10h4v4H10z" />
+</svg>'
+```
+
+<br>
+
+**Squares using path:**
+
+<svg fill="none" width="24" height="24" viewBox="0 0 24 24">
+    <rect fill ="#ff0000" x="0" y="0" width="24" height="24"/>
+    <rect fill ="#00ff00" x="2" y="2" width="20" height="20"/>
+    <rect fill ="#0000ff" x="4" y="4" width="16" height="16"/>
+    <rect fill ="#ffff00" x="6" y="6" width="12" height="12"/>
+    <rect fill ="#ff00ff" x="8" y="8" width="8" height="8"/>
+    <rect fill ="#00ffff" x="10" y="10" width="4" height="4"/>
+</svg>
+
+```svg
+@svg_sqB24='<svg fill="none" viewBox="0 0 24 24">
+    <rect fill ="#ff0000" x="0" y="0" width="24" height="24"/>
+    <rect fill ="#00ff00" x="2" y="2" width="20" height="20"/>
+    <rect fill ="#0000ff" x="4" y="4" width="16" height="16"/>
+    <rect fill ="#ffff00" x="6" y="6" width="12" height="12"/>
+    <rect fill ="#ff00ff" x="8" y="8" width="8" height="8"/>
+    <rect fill ="#00ffff" x="10" y="10" width="4" height="4"/>
+</svg>'
+```
