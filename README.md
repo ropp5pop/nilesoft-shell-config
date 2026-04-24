@@ -16,6 +16,7 @@ ___
 
 - Tested on Canary - **https://nilesoft.org/download/shell/shell-canary.zip**
 - This config is what I personally use, there are some items you probably want to edit or delete.
+- Furhter info - [CheatSheet](cheatsheet.md)
 
 ***
 
