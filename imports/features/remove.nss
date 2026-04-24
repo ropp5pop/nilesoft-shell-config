@@ -19,6 +19,7 @@ remove(mode=mode.multiple
     id.restore,
     id.restore_previous_versions,
     id.set_as_desktop_background,
-    id.share
+    id.share,
+    id.troubleshoot_compatibility
   )
 )

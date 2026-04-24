@@ -9,8 +9,7 @@ modify(mode=mode.multiple vis=mkeyANY
 		id.format,
 		id.eject,
 		id.give_access_to,
-		id.include_in_library,
-		id.troubleshoot_compatibility
+		id.include_in_library
 	)
 	pos=1 menu=title.more_options)
 
