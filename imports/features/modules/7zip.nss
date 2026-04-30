@@ -16,14 +16,14 @@ $se7zU = 'apfs|ar|arj|cab|chm|cpio|cramfs|dmg|ext|fat|gpt|hfs|ihex|iso|lzh|lzma|
 $se7zM = 'txt|log|cfg|c|cpp|java|py|html|xml|ini|conf|yaml|json|bat|sh|ps1|csv|doc'
 
 // Main
-menu(title='7-Zip' mode='multiple' type='file|dir|drive|back' image=cmd_7zipA) 
+menu(title='7-Zip' mode='multiple' type='file|dir|drive|back' image=\uE223) 
 {
 	$is_se7z1 = if(keys.shift(), '', str.replace('."'+se7zP+'|'+se7zU+'"', '|', '"|."'))
 	$is_se7z3 = str.replace('."'+se7zM+'"', '|', '"|."')
 	$sel_air = str.replace('"-air!@sel(false, '" "-air!')#', '" "-air#', '" -an')
 	
 	// Extract
-	menu(title='Extract...' type='file' find=is_se7z1 image=icon.svg_minus expanded=1)
+	menu(title='Extract...' type='file' find=is_se7z1 image=$svg_minus expanded=1)
 	{
 		separator
 		item(title='Extract Here' image=inherit cmd=cmd_7zipG args='x @sel_air -spe')
@@ -32,7 +32,7 @@ menu(title='7-Zip' mode='multiple' type='file|dir|drive|back' image=cmd_7zipA)
 	}
 	
 	// Archive
-	menu(title='Archive...' type='file|dir|drive|back' image=icon.svg_plus expanded=1) 
+	menu(title='Archive...' type='file|dir|drive|back' image=$svg_plus expanded=1) 
 	{
 		$tip_shift_zip=["+[SHIFT] for .zip", 1.0]
 		separator
