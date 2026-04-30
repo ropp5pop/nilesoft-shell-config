@@ -18,6 +18,6 @@ import core + 'svgs.nss'
 // Features
 import feat + 'new.nss'
 import feat + 'taskbar.nss'
-import feat + 'winx.nss'
+import feat + 'legacy.nss'
 import feat + 'modify.nss'
 import feat + 'remove.nss'
