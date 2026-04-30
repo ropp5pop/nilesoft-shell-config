@@ -25,7 +25,7 @@ $mkeySC     = key.shift() && key.control()
 
 // Tooltip
 $tipANYM2 = "(SHIFT/CTRL/RIGHT-CLICK)"
-$tipADMIN = ["Administrator + " + tipANYM2, tip.warning, 1.0]
+$tipADMIN = ["Administrator + " + $tipANYM2, tip.warning, 1.0]
 
 // Misc
 $dt = sys.datetime("ymd_HM")
