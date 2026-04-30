@@ -5,12 +5,12 @@ item(title='Edit with VSCodium' type='file' vis=$mkeyANY image pos=1
 	cmd='%LocalAppData%' + '\Programs\VSCodium\VSCodium.exe' 
 	args='"' + @sel.file.name + '"')
 
-item(title='Edit2 with Notepad++' type='file' vis=$mkeyANY image
+item(title='Edit with Notepad++' type='file' vis=$mkeyANY image
 	cmd=@sys.prog + '\Notepad++\notepad++.exe' 
 	args='"' + @sel.file.name + '"' pos=2 sep=bottom)
 
 // Menus
-menu(mode="multiple" title="Pin/Unpin" image=icon.pin vis=mkeySC)
+menu(mode="multiple" title="Pin/Unpin" image=icon.pin vis=$mkeySC)
 {
 }
 
@@ -59,4 +59,4 @@ menu(mode="single" type='desktop' title='Display' pos="9" image=[\uE203, #338822
 import mods + 'devutil.nss'
 
 // New item - Restart Explorer
-item(title="Restart Explorer" cmd=command.restart_explorer vis=mkeySC pos=bottom sep=before image=[\UE29A, #bb2233])
+item(title="Restart Explorer" cmd=command.restart_explorer vis=$mkeySC pos=bottom sep=before image=[\UE29A, #bb2233])
