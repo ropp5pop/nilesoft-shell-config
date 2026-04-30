@@ -3,3 +3,5 @@
 *.dll
 *.log
 .temp/
+.backup/
+docs/.wip/
