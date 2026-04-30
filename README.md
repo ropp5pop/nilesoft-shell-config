@@ -21,7 +21,7 @@ ___
 ***
 
 <details>
-<summary><h3>Optimize for better performance (optional)</h3></summary>
+<summary><h3>Optimize Performance (optional)</h3><i> (click to expand)</i></summary>
 
 I recommend blocking slow-loading entries by their GUID in the registry. 
 The `remove` item and `vis=disable` property only hides the entry.
