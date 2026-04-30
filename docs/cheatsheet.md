@@ -22,7 +22,3 @@ Some help for further development.
   [new.nss](imports/features/new.nss#L6) _(Line: 6)_
   - `args='"' + @sel.file.name + '"'`
     <br>
-
-- [Design-System](design-system.md)
-
----
