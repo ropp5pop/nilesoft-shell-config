@@ -4,6 +4,8 @@ Some help for further development.
 
 ---
 
+<!-- Colors -->
+
 ### Colors
 
 - **theme**
@@ -32,26 +34,30 @@ Some help for further development.
 
 ---
 
+<!-- Snippets -->
+
 ### Snippets
 
 - **If this or this:**
-  [env.nss](imports\core\env.nss#L12) _(Line: 12)_
+  [env.nss](imports/core/env.nss#L12) _(Line: 12)_
   - `$wScale = if(wnd.name == 'SystemTray_Main' || wnd.is_start, 1.1, 1)`
     <br>
 
 - **2x if-statements:**
-  [theme.nss](imports\core\theme.nss#L33) _(Line: 33)_
+  [theme.nss](imports/core/theme.nss#L33) _(Line: 33)_
   - `border.color  = if(key.alt(), #bb2233, if($mkeyANYM1, #ffbb22, #404558))`
     <br>
 
 - **Wrap in double-quotes at runtime to support spaces in filenames etc.:**
-  [new.nss](imports\features\new.nss#L6) _(Line: 6)_
+  [new.nss](imports/features/new.nss#L6) _(Line: 6)_
   - `args='"' + @sel.file.name + '"'`
     <br>
 
 - Furhter info - [CheatSheet](cheatsheet.md)
 
 ---
+
+<!-- SVG -->
 
 ### SVG
 
@@ -63,7 +69,8 @@ Some help for further development.
 - **viewBox:** `"0 0 24 24"`
 
 <details>
-    <summary><h5>SVG Examples</h5><i>(click to expand)</i></summary>
+    <summary><h4>SVG Basic Examples</h4><i> (click to expand)</i></summary>
+
   ```svg
     <svg height="128" viewBox="0 0 24 24">
       <path fill="#000000" d="M0 0h24v24H0z" />
@@ -75,15 +82,15 @@ Some help for further development.
     </svg>
   ```
 
-```svg
-  @svg_sq='<svg fill="none" viewBox="0 0 24 24">
-    <path fill="#ff0000" d="M0 0h24v24H0" />
-    <path fill="#00ff00" d="M2 2h20v20H2z" />
-    <path fill="#0000ff" d="M4 4h16v16H4z" />
-    <path fill="#ffff00" d="M6 6h12v12H6z" />
-    <path fill="#ff00ff" d="M8 8h8v8H8z" />
-    <path fill="#00ffff" d="M10 10h4v4H10z" />
-  </svg>'
-```
+  ```svg
+    @svg_sq='<svg fill="none" viewBox="0 0 24 24">
+      <path fill="#ff0000" d="M0 0h24v24H0" />
+      <path fill="#00ff00" d="M2 2h20v20H2z" />
+      <path fill="#0000ff" d="M4 4h16v16H4z" />
+      <path fill="#ffff00" d="M6 6h12v12H6z" />
+      <path fill="#ff00ff" d="M8 8h8v8H8z" />
+      <path fill="#00ffff" d="M10 10h4v4H10z" />
+    </svg>'
+  ```
 
 </details>
