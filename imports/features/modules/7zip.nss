@@ -44,7 +44,7 @@ menu(title='7-Zip' mode='multiple' type='file|dir|drive|back' image=\uE223)
 	}
 	
 	// Archive -> mkeyANY	
-	menu(title='Archive...' where=mkeyANY image=inherit expanded=1) 
+	menu(title='Archive...' where=$mkeyANY image=inherit expanded=1) 
 	{
 		separator
 		item(title='Add to "@(sel.title).7z" with password' keys='Shift in secret' image=inherit

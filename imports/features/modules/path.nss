@@ -1,5 +1,5 @@
   // path
-  menu(mode='single' title=title.copy_path image=icon.copy_path pos=top sep=after vis=mkeyANY)
+  menu(mode='single' title=title.copy_path image=icon.copy_path pos=top sep=after vis=$mkeyANY)
   {
     item(title='Open Path' image cmd='explorer.exe' args='/select, @sel')
     separator()

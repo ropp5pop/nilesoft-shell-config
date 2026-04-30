@@ -1,4 +1,4 @@
-modify(mode=mode.multiple vis=mkeyANY
+modify(mode=mode.multiple vis=$mkeyANY
 	where=this.id(
 		id.cast_to_device,
 		id.set_as_desktop_background,
@@ -14,9 +14,9 @@ modify(mode=mode.multiple vis=mkeyANY
 	pos=1 menu=title.more_options)
 
 // Menu - View
-modify(find="View" vis=mkeyANY)
-modify(find="Paint" vis=mkeyANY sep=none)
-modify(find="Group by|Sort by" vis=mkeyANY menu="view" sep=before)
+modify(find="View" vis=$mkeyANY)
+modify(find="Paint" vis=$mkeyANY sep=none)
+modify(find="Group by|Sort by" vis=$mkeyANY menu="view" sep=before)
 
 // Menu - Pin/Unpin
 modify(find="pin*" menu="Pin/Unpin" pos="top")
@@ -25,7 +25,7 @@ modify(find="unpin*" menu="Pin/Unpin" pos="bottom")
 // Menu - Manage
 modify(where=this.name=='scan with microsoft defender' menu='Manage' sep=both)
 modify(find='Send To|Locksmith' menu='Manage')
-modify(find="Terminal Preview" title='Terminal' menu='Manage' vis=mkeyANY sep=none)
+modify(find="Terminal Preview" title='Terminal' menu='Manage' vis=$mkeyANY sep=none)
 
 // Menu - Display
 modify(find='Personalize' menu="Display" sep=after)
