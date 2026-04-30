@@ -29,8 +29,3 @@ $tipADMIN = ["Administrator + " + tipANYM2, tip.warning, 1.0]
 
 // Misc
 $dt = sys.datetime("ymd_HM")
-
-// Colors - TODO: revert to use hex-code for code readability
-$Red        = #bb2233
-$LightBlue  = #4cc2ff
-$Green      = #338822
