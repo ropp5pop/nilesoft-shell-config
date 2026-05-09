@@ -1,6 +1,6 @@
 remove(find="OneDrive|Powershell")
 remove(find="new|copy|cut|delete|paste|undo|redo")
-remove(find="Always keep*|Free up space|View online|Version history|Different User|Sync or Backup|Favorites") 
+remove(find="Always keep*|Free up space|View online|Version history|Different User|Sync or Backup|Favorites")
 
 remove(mode=mode.multiple
   where=this.id(

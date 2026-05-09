@@ -2,11 +2,11 @@
 item(title='Open Path' image cmd='explorer.exe' pos=top sep=after vis=$mkeyANY args='/select, @sel' where=sel.file.ext != '.lnk')
 
 item(title='Edit with VSCodium' type='file' vis=$mkeyANY image pos=1
-	cmd='%LocalAppData%' + '\Programs\VSCodium\VSCodium.exe' 
+	cmd='%LocalAppData%' + '\Programs\VSCodium\VSCodium.exe'
 	args='"' + @sel.file.name + '"')
 
 item(title='Edit with Notepad++' type='file' vis=$mkeyANY image
-	cmd=@sys.prog + '\Notepad++\notepad++.exe' 
+	cmd=@sys.prog + '\Notepad++\notepad++.exe'
 	args='"' + @sel.file.name + '"' pos=2 sep=bottom)
 
 // Menus
@@ -19,11 +19,11 @@ menu(where=sel.count>0 type='file|dir|drive|namespace|back' mode="multiple" titl
 {
 	import mods + 'path.nss'
 	import mods + 'terminal.nss'
-	sep   
+	sep
 	item(type='file|dir|back.dir|drive' title='Take Ownership' image=[\uE194,#f00] admin vis=$mkeyANY
 		cmd args='/K takeown /f "@sel.path" @if(sel.type==1,null,"/r /d y") && icacls "@sel.path" /grant *S-1-5-32-544:F @if(sel.type==1,"/c /l","/t /c /l /q")')
-	
-	item(where=!wnd.is_desktop title=title.folder_options image=icon.folder_options cmd=command.folder_options pos=bottom)    
+
+	item(where=!wnd.is_desktop title=title.folder_options image=icon.folder_options cmd=command.folder_options pos=bottom)
 }
 
 // New menu - Tools
