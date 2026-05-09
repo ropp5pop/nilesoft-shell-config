@@ -49,8 +49,8 @@ The `remove` item and `vis=disable` property only hides the entry.
 - Location: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked`
   (If not already present, create a new key named `Blocked`)
 
-- Add a new `String Value` (REG*SZ) and name it with GUID in brackets.
-  \_Example: `{8BCF599D-B158-450F-B4C2-430932F2AF2F}`*
+- Add a new `String Value` (`REG_SZ`) and name it with GUID in brackets.
+  Example: `{8BCF599D-B158-450F-B4C2-430932F2AF2F}`
 
 - Use the `Data` field to describe what you're blocking in plain text.
 

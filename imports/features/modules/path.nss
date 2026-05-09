@@ -5,4 +5,4 @@
     separator()
     item(image=inherit cmd=command.copy(this.title) title=sel.path)
     item(cmd=command.copy(this.title) type='file|dir|back.dir' title=@sel.file.name)
-  } 
+  }

@@ -8,13 +8,13 @@ menu(type='*' mode='single' title='DEV Helpers' image=svg_sq14 pos=bottom sep=af
     $atrr = io.attributes(sel.path)
     item(title='hidden' 	checked=io.attribute.hidden(atrr)		window=hidden
       cmd args='/c ATTRIB @if(io.attribute.hidden(atrr),"-","+")H "@sel.path"')
-    
+
     item(title='system' 	checked=io.attribute.system(atrr) 	window=hidden
       cmd args='/c ATTRIB @if(io.attribute.system(atrr),"-","+")S "@sel.path"')
-    
+
     item(title='readonly'	checked=io.attribute.readonly(atrr) window=hidden
       cmd args='/c ATTRIB @if(io.attribute.readonly(atrr),"-","+")R "@sel.path"')
-    
+
     item(title='archive'	checked=io.attribute.archive(atrr) 	window=hidden
       cmd args='/c ATTRIB @if(io.attribute.archive(atrr),"-","+")A "@sel.path"')
     sep
