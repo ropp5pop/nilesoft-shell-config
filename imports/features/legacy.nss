@@ -11,7 +11,7 @@ menu(mode="multiple" title='startmenu' image=icon.more_options type='start' expa
   item(title='Device Manager' type='start' image=icon.device_manager cmd='devmgmt.msc')
 
   // Tools Menu
-  menu(mode="multiple" title='Tools' image=icon.more_options type='start' pos=3 expanded=$mkeyANY sep=both)
+  menu(mode="multiple" title='Tools' image=icon.more_options type='start' pos=3 expanded=$mkeyANYM1 sep=both)
   {
     menu(mode="multiple" title='sys_manage' type='start' expanded=1 pos=3)
     {

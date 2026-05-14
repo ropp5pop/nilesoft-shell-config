@@ -14,9 +14,9 @@ modify(mode=mode.multiple vis=$mkeyANY
 	pos=1 menu=title.more_options)
 
 // Menu - View
-modify(find="View" vis=$mkeyANY)
+modify(find="View" vis=$mkeyANYM1)
 modify(find="Paint" vis=$mkeyANY sep=none)
-modify(find="Group by|Sort by" vis=$mkeyANY menu="view" sep=before)
+modify(find="Group by|Sort by" vis=$mkeyANYM1 menu="view" sep=before)
 
 // Menu - Pin/Unpin
 modify(find="pin*" menu="Pin/Unpin" pos="top")
