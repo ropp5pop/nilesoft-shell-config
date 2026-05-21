@@ -1,7 +1,12 @@
 # ignore
-*.exe
+
+# ext
+*.bak
 *.dll
+*.exe
 *.log
+
+# dir
 .temp/
 .backup/
 docs/.wip/
