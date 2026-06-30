@@ -27,7 +27,6 @@
 
 ---
 
-<details>
 <summary><h3>Optimize Performance (optional)</h3><i> (click to expand)</i></summary>
 
 I recommend blocking slow-loading entries by their GUID in the registry.
@@ -50,13 +49,11 @@ The `remove` item and `vis=disable` property only hides the entry.
   (If not already present, create a new key named `Blocked`)
 
 - Add a new `String Value` (`REG_SZ`) and name it with GUID in brackets.
-  Example: `{8BCF599D-B158-450F-B4C2-430932F2AF2F}`
+  Example: `{CA6CC9F1-867A-481E-951E-A28C5E4F01EA}`
 
-- Use the `Data` field to describe what you're blocking in plain text.
+- Use the `Data` field to describe what you're blocking in plain text. In this example `Edit with Notepad`.
 
 **Related information:** [Nilesoft-Shell-Snippets/ext.nilesoft/nss.disabler.tut.md](https://github.com/RubicBG/Nilesoft-Shell-Snippets/blob/main/ext.nilesoft/nss.disabler.tut.md)
-
-</details>
 
 ---
 
