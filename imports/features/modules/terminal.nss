@@ -7,8 +7,8 @@ item( admin=$mkeyANYM2 tip=$tipADMIN
 	args=`-p "cmd" -d "@sel.path\."`)
 
 item( admin=$mkeyANYM2 tip=$tipADMIN
-	image=@sys.prog + '\PowerShell\7\pwsh.exe'
+	image=$cmd_pwsh
 	title='Terminal (pwsh)'
-	where=package.exists("WindowsTerminal")
+	where=package.exists("WindowsTerminal") && path.exists($cmd_pwsh)
 	cmd="wt.exe"
 	args=`-p "PowerShell" -d "@sel.path\."`)
