@@ -22,3 +22,27 @@ Some help for further development.
   [new.nss](../imports/features/new.nss#L6) _(Line: 6)_
   - `args='"' + @sel.file.name + '"'`
     <br>
+
+### Code Format/Style Conventions
+
+- **Property**
+  - First line: identity/control props like `title`, `mode`, `where`, `type`, `vis`
+  - Next lines: visual/layout props like `image`, `sep`, `pos`
+  - Last lines: action props like `admin`, `cmd`, `args`
+  - Split long `where` or `args` onto its own line
+  - Be consistent per file, not necessarily dogmatic repo-wide
+    <br>
+
+- **One property per line for multi-line items:**
+
+  ```ini
+  item(
+    title='Edit with VSCodium'
+    type='file'
+    image
+    where=path.exists($cmd_vscodium)
+    vis=$mkeyANY
+    cmd=$cmd_vscodium
+    args='"' + @sel.file.name + '"'
+  )
+  ```

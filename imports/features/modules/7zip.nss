@@ -1,24 +1,35 @@
 // Hide default "Extract All..."
 modify(find='Extract All' vis=hidden)
 
-// Executable Paths
-$cmd_7zipC = path.combine(sys.prog,'7-Zip','7z.exe')
-$cmd_7zipG = path.combine(sys.prog,'7-Zip','7zG.exe')
-$cmd_7zipA = path.combine(sys.prog,'7-Zip','7zFM.exe')
-
-// Supported formats:: Packing / unpacking:
-$se7zP = '7z|xz|bz2|gz|tar|zip|wim'
+// Supported formats: Packing / unpacking:
+$ext7zP = '7z|xz|bz2|gz|tar|zip|wim|br|brotli|tbr|liz|tliz|lz4|tlz4|lz5|tlz5|zst|zstd|tzst|tzstd'
 
 // Supported formats: Unpacking only:
-$se7zU = 'apfs|ar|arj|cab|chm|cpio|cramfs|dmg|ext|fat|gpt|hfs|ihex|iso|lzh|lzma|mbr|msi|nsis|ntfs|qcow2|rar|rpm|squashfs|udf|uefi|vdi|vhd|vhdx|vmdk|xar|z' + '|docx|xlsx|pptx|odt|ods|odp|odg|odf|ott|ots|otp' // Office Open XML and OpenDocument formats
+
+  $ext7za = 'dmg|iso|udf|vdi|vhd|vhdx|vmdk|qcow2|' // Disk Images and Virtualization
+
+  $ext7zb = 'ar|arj|cpio|lha|lzh|lz|tlz|lzma|rar|xar|z|' // Compressed Archives
+
+  $ext7zc = 'cab|msi|nsis|rpm|' // Software Installers and Packages
+
+  $ext7zd = 'apfs|cramfs|ext|fat|gpt|hfs|mbr|ntfs|squashfs|'  // File Systems and Partition Tables
+
+  $ext7ze = 'chm|ihex|uefi|'  // System Firmware and Help Documentation
+
+  $ext7zf = 'docx|xlsx|pptx|odt|ods|odp|odg|odf|ott|ots|otp|'  // Office Open XML and OpenDocument formats
+
+  // Misc
+  $ext7zg = 'pkg'
+
+$ext7zU = $ext7za + $ext7zb + $ext7zc + $ext7zd + $ext7ze + $ext7zf + $ext7zg
 
 // Supported extension: ppmd:
 $se7zM = 'txt|log|cfg|c|cpp|java|py|html|xml|ini|conf|yaml|json|bat|sh|ps1|csv|doc'
 
 // Main
-menu(title='7-Zip' mode='multiple' type='file|dir|drive|back' image=\uE223)
+menu(title='7-Zip ZS' mode='multiple' type='file|dir|drive|back' image=\uE223 where=path.exists($cmd_7zipG))
 {
-	$is_se7z1 = if(keys.shift(), '', str.replace('."'+se7zP+'|'+se7zU+'"', '|', '"|."'))
+	$is_se7z1 = if(keys.shift(), '', str.replace('."'+ext7zP+'|'+ext7zU+'"', '|', '"|."'))
 	$is_se7z3 = str.replace('."'+se7zM+'"', '|', '"|."')
 	$sel_air = str.replace('"-air!@sel(false, '" "-air!')#', '" "-air#', '" -an')
 

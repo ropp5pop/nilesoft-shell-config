@@ -2,11 +2,13 @@
 item(title='Open Path' image cmd='explorer.exe' pos=top sep=after vis=$mkeyANY args='/select, @sel' where=sel.file.ext != '.lnk')
 
 item(title='Edit with VSCodium' type='file' vis=$mkeyANY image pos=1
-	cmd='%LocalAppData%' + '\Programs\VSCodium\VSCodium.exe'
+	where=path.exists($cmd_vscodium)
+	cmd=$cmd_vscodium
 	args='"' + @sel.file.name + '"')
 
 item(title='Edit with Notepad++' type='file' vis=$mkeyANY image
-	cmd=@sys.prog + '\Notepad++\notepad++.exe'
+	where=path.exists($cmd_npp)
+	cmd=$cmd_npp
 	args='"' + @sel.file.name + '"' pos=2 sep=bottom)
 
 // Menus
@@ -60,3 +62,5 @@ import mods + 'devutil.nss'
 
 // New item - Restart Explorer
 item(title="Restart Explorer" cmd=command.restart_explorer vis=$mkeySC pos=bottom sep=before image=[\UE29A, #bb2233])
+
+item(type='file|dir|drive|back' where=sel.count>0 image=inherit cmd=command.copy(this.title) title=sel.path vis=$mkeyANYM1)
