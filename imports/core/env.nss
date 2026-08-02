@@ -18,12 +18,11 @@ $mods   = '@app.dir\imports\features\modules\'
 $nvcnt  = $mods + 'scripts\nvcnt.ps1'
 
 // Local Paths
-$portable = 'C:\Program Portable\System Tools\'
+$portable = 'C:\Program Portable\'
 $devenv = 'D:\.dev-env'
 $repo = $devenv + '\_projects\.repos\nilesoft-shell-config'
 $scripts = $devenv + '\_scripts\.active'
 $start = @sys.programdata + '\Microsoft\Windows\Start Menu'
-
 
 // Executables
 $cmd_7zipC    = path.combine(sys.prog, '7-Zip-Zstandard', '7z.exe')
@@ -31,7 +30,7 @@ $cmd_7zipG    = path.combine(sys.prog, '7-Zip-Zstandard', '7zG.exe')
 $cmd_7zipA    = path.combine(sys.prog, '7-Zip-Zstandard', '7zFM.exe')
 $cmd_aren     = path.combine(sys.prog, 'Advanced Renamer', 'ARen.exe')
 $cmd_npp      = path.combine(sys.prog, 'Notepad++', 'notepad++.exe')
-$cmd_nvcpl    = 'C:\Program Portable\NVIDIA ControlPanel\nvcplui.exe'
+$cmd_nvcpl    = $portable + 'NVIDIA ControlPanel\nvcplui.exe'
 $cmd_pwsh     = path.combine(sys.prog, 'PowerShell', '7', 'pwsh.exe')
 $cmd_vscodium = path.combine(sys.prog, 'VSCodium', 'VSCodium.exe')
 
