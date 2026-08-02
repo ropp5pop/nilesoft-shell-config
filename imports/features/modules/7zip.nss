@@ -1,6 +1,3 @@
-// Hide default "Extract All..."
-modify(find='Extract All' vis=hidden)
-
 // Supported formats: Packing / unpacking:
 $ext7zP = '7z|xz|bz2|gz|tar|zip|wim|br|brotli|tbr|liz|tliz|lz4|tlz4|lz5|tlz5|zst|zstd|tzst|tzstd'
 
