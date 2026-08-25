@@ -10,3 +10,6 @@
 .temp/
 .backup/
 docs/.wip/
+
+# file
+desktop.ini
