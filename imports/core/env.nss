@@ -15,7 +15,10 @@ $wScale = if(wnd.name == 'SystemTray_Main' || wnd.is_start, 1.1, 1)
 $core   = '@app.dir\imports\core\'
 $feat   = '@app.dir\imports\features\'
 $mods   = '@app.dir\imports\features\modules\'
-$nvcnt  = $mods + 'scripts\nvcnt.ps1'
+$scrpt  = '@app.dir\imports\features\modules\scripts\'
+
+$nvcnt  = $scrpt + 'nvcnt.ps1'
+$short  = $scrpt + 'shortcut.ps1'
 
 // Local Paths
 $portable = 'C:\Program Portable\'
@@ -33,6 +36,10 @@ $cmd_npp      = path.combine(sys.prog, 'Notepad++', 'notepad++.exe')
 $cmd_nvcpl    = $portable + 'NVIDIA ControlPanel\nvcplui.exe'
 $cmd_pwsh     = path.combine(sys.prog, 'PowerShell', '7', 'pwsh.exe')
 $cmd_vscodium = path.combine(sys.prog, 'VSCodium', 'VSCodium.exe')
+
+// Registry Keys
+$reg_explorer = 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\'
+$reg_advanced = $reg_explorer + 'Advanced'
 
 // Keys
 $mkeyANY    = key.shift() || key.control()
