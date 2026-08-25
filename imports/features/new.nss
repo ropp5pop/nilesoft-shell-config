@@ -7,14 +7,15 @@ item(title='Open Path' type='dir|back'
 // New module - DEV Helpers
 import mods + 'devutil.nss'
 sep
+
 // New 'Edit with' items
 item(title='Edit with VSCodium' type='file' vis=$mkeyANYM1 
-	image pos=1
+	image pos=1 sep=before
 	cmd=$cmd_vscodium
 	args='"' + @sel.file.name + '"' where=sel.file.ext != '.lnk')
 
 item(title='Edit with Notepad++' type='file' vis=$mkeyANYM1
-	image pos=2 sep=bottom
+	image pos=2 sep=after
 	cmd=$cmd_npp
 	args='"' + @sel.file.name + '"' where=sel.file.ext != '.lnk')
 
@@ -65,8 +66,6 @@ menu(mode="single" type='desktop' title='Display' pos="9" image=[\uE203, #338822
 {
 	import mods + 'nvcpl.nss'
 }
-
-
 
 // New item - Restart Explorer
 item(title="Restart Explorer" cmd=command.restart_explorer vis=$mkeySC pos=bottom sep=before image=[\UE29A, #bb2233])
