@@ -1,15 +1,22 @@
+// Open Path
+item(title='Open Path' type='dir|back'
+	image pos=top
+	cmd='explorer.exe'
+	args='/select, @sel')
+
+// New module - DEV Helpers
+import mods + 'devutil.nss'
+sep
 // New 'Edit with' items
-item(title='Open Path' image cmd='explorer.exe' pos=top sep=after vis=$mkeyANY args='/select, @sel' where=sel.file.ext != '.lnk')
-
-item(title='Edit with VSCodium' type='file' vis=$mkeyANY image pos=1
-	where=path.exists($cmd_vscodium)
+item(title='Edit with VSCodium' type='file' vis=$mkeyANYM1 
+	image pos=1
 	cmd=$cmd_vscodium
-	args='"' + @sel.file.name + '"')
+	args='"' + @sel.file.name + '"' where=sel.file.ext != '.lnk')
 
-item(title='Edit with Notepad++' type='file' vis=$mkeyANY image
-	where=path.exists($cmd_npp)
+item(title='Edit with Notepad++' type='file' vis=$mkeyANYM1
+	image pos=2 sep=bottom
 	cmd=$cmd_npp
-	args='"' + @sel.file.name + '"' pos=2 sep=bottom)
+	args='"' + @sel.file.name + '"' where=sel.file.ext != '.lnk')
 
 // Menus
 menu(mode="multiple" title="Pin/Unpin" image=icon.pin vis=$mkeySC)
@@ -24,7 +31,7 @@ menu(where=sel.count>0 type='file|dir|drive|namespace|back' mode="multiple" titl
 	sep
 	item(type='file|dir|back.dir|drive' title='Take Ownership' image=[\uE194,#f00] admin vis=$mkeyANY
 		cmd args='/K takeown /f "@sel.path" @if(sel.type==1,null,"/r /d y") && icacls "@sel.path" /grant *S-1-5-32-544:F @if(sel.type==1,"/c /l","/t /c /l /q")')
-
+	
 	item(where=!wnd.is_desktop title=title.folder_options image=icon.folder_options cmd=command.folder_options pos=bottom)
 }
 
@@ -46,6 +53,8 @@ menu(mode="single" type='back' title='New'  image=[\uE17A, #4cc2ff] sep=after vi
 	item(title='.txt'		cmd=io.file.create('@(dt).txt')   image=icon.new_file)
 	item(title='.xml'		cmd=io.file.create('@(dt).xml')		image=icon.new_file)
 	item(title='.json'	cmd=io.file.create('@(dt).json')	image=icon.new_file)
+	sep
+	import mods + 'shortcut.nss'
 }
 
 // New module - 7-Zip
@@ -57,10 +66,7 @@ menu(mode="single" type='desktop' title='Display' pos="9" image=[\uE203, #338822
 	import mods + 'nvcpl.nss'
 }
 
-// New module - DEV Helpers
-import mods + 'devutil.nss'
+
 
 // New item - Restart Explorer
 item(title="Restart Explorer" cmd=command.restart_explorer vis=$mkeySC pos=bottom sep=before image=[\UE29A, #bb2233])
-
-item(type='file|dir|drive|back' where=sel.count>0 image=inherit cmd=command.copy(this.title) title=sel.path vis=$mkeyANYM1)
