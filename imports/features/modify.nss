@@ -1,21 +1,20 @@
 modify(mode=mode.multiple vis=$mkeyANY
-	where=this.id(
-		id.cast_to_device,
-		id.set_as_desktop_background,
-		id.rotate_left,
-		id.rotate_right,
-		id.map_network_drive,
-		id.disconnect_network_drive,
-		id.format,
-		id.eject,
-		id.give_access_to,
-		id.include_in_library
-	)
-	pos=1 menu=title.more_options)
+  where=this.id(
+    id.cast_to_device,
+    id.set_as_desktop_background,
+    id.rotate_left,
+    id.rotate_right,
+    id.map_network_drive,
+    id.disconnect_network_drive,
+    id.format,
+    id.eject,
+    id.give_access_to,
+    id.include_in_library
+  )
+  pos=1 menu=title.more_options)
 
 // Menu - View
-modify(find="View" vis=$mkeyANYM1)
-modify(find="Paint" vis=$mkeyANY sep=none)
+modify(find="View" vis=$mkeyANYM1 && !$mkeySC sep=before)
 modify(find="Group by|Sort by" vis=$mkeyANYM1 menu="view" sep=before)
 
 // Menu - Pin/Unpin
@@ -25,7 +24,6 @@ modify(find="unpin*" menu="Pin/Unpin" pos="bottom")
 // Menu - Manage
 modify(where=this.name=='scan with microsoft defender' menu='Manage' sep=both)
 modify(find='Send To|Locksmith' menu='Manage')
-modify(find="Terminal Preview" title='Terminal' menu='Manage' vis=$mkeyANY sep=none)
 
 // Menu - Display
 modify(find='Personalize' menu="Display" sep=after)
