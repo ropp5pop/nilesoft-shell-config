@@ -1,5 +1,5 @@
 // Helpers for nss
-menu(type='*' mode='single' title='DEV Helpers' image=svg_sq14 pos=bottom sep=after vis=$mkeySC)
+menu(type='*' mode='single' title='DEV Helpers' image=$svg_sq16 vis=$mkeySC)
 {
   item(title=wnd.name image=svg_sq)
   sep
