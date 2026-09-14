@@ -1,20 +1,13 @@
 // Supported formats: Packing / unpacking:
-$ext7zP = '7z|xz|bz2|gz|tar|zip|wim|br|brotli|tbr|liz|tliz|lz4|tlz4|lz5|tlz5|zst|zstd|tzst|tzstd'
+	$ext7zP = '7z|xz|bz2|gz|tar|zip|wim|br|brotli|tbr|liz|tliz|lz4|tlz4|lz5|tlz5|zst|zstd|tzst|tzstd'
 
 // Supported formats: Unpacking only:
-
   $ext7za = 'dmg|iso|udf|vdi|vhd|vhdx|vmdk|qcow2|' // Disk Images and Virtualization
-
   $ext7zb = 'ar|arj|cpio|lha|lzh|lz|tlz|lzma|rar|xar|z|' // Compressed Archives
-
   $ext7zc = 'cab|msi|nsis|rpm|' // Software Installers and Packages
-
   $ext7zd = 'apfs|cramfs|ext|fat|gpt|hfs|mbr|ntfs|squashfs|'  // File Systems and Partition Tables
-
   $ext7ze = 'chm|ihex|uefi|'  // System Firmware and Help Documentation
-
   $ext7zf = 'docx|xlsx|pptx|odt|ods|odp|odg|odf|ott|ots|otp|'  // Office Open XML and OpenDocument formats
-
   // Misc
   $ext7zg = 'pkg'
 
