@@ -1,9 +1,11 @@
 # Check status and if needed start/stop required service for NVCPL
 
-param([string]$Action)
+param(
+    [string]$Action,
+    [string]$NVCPL = "C:\Program Portable\NVIDIA ControlPanel\nvcplui.exe"
+)
 
 $ServiceName = "NVDisplay.ContainerLocalSystem"
-$NVCPL = "C:\Program Portable\NVIDIA ControlPanel\nvcplui.exe"
 
 $Service = Get-Service $ServiceName -ErrorAction SilentlyContinue
 
