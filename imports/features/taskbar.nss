@@ -28,5 +28,5 @@ menu(where=@(this.count == 0) type="taskbar" image=icon.settings expanded=true)
 		cmd=reg.set(reg_advanced, 'TaskbarSizeMove', 0, reg.dword))
 	item(title='Taskbar Settings' image=inherit cmd='ms-settings:taskbar')
 	
-	item(title="Restart Explorer" cmd=command.restart_explorer vis=$mkeySC pos=bottom sep=before image=[\UE29A, #bb2233])
+	item(title="Restart Explorer" cmd=command.restart_explorer vis=$mkeySC pos=bottom sep=before image=[\uE29A, #bb2233])
 }

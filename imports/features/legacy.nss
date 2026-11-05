@@ -35,7 +35,7 @@ menu(mode="multiple" title='startmenu' image=icon.more_options type='start' expa
 		
 	}
 	
-	item(title='Run' type='start' image=\UE123 cmd='explorer.exe' args='shell:::{2559a1f3-21d7-11d4-bdaf-00c04f60b9f0}')
+	item(title='Run' type='start' image=\uE123 cmd='explorer.exe' args='shell:::{2559a1f3-21d7-11d4-bdaf-00c04f60b9f0}')
 	
 	menu(mode="multiple" title='Shut down...' type='start' pos=bottom)
 	{
@@ -46,13 +46,13 @@ menu(mode="multiple" title='startmenu' image=icon.more_options type='start' expa
 modify(find='Shut Down' type='start' image=\uE12F pos=bottom)
 
 // Win 7 - Navigation Bar
-remove(type='*' where=wnd.name=='CabinetWClass' and wnd.parent.name=='msctls_progress32' find='Edit address|Delete history|*text')
+remove(type='*' where=wnd.name=='CabinetWClass' && wnd.parent.name=='msctls_progress32' find='Edit address|Delete history|*text')
 
-modify(find='Top' where=wnd.name=='CabinetWClass' and wnd.parent.name=='msctls_progress32' type='*' image=\UE123)
-modify(type='*' where=wnd.name=='CabinetWClass' where=this.name=='Copy address' title='Copy' image=$svg_sq24)
+modify(find='Top' where=wnd.name=='CabinetWClass' && wnd.parent.name=='msctls_progress32' type='*' image=\uE123)
+modify(type='*' where=wnd.name=='CabinetWClass' && this.name=='Copy address' title='Copy' image=$svg_sq24)
 
 // Win 7 - Scroll Bar
-remove(type='*'where=wnd.parent.name=='DirectUIHWND' find='Page|Scroll|Edge')
+remove(type='*' where=wnd.parent.name=='DirectUIHWND' find='Page|Scroll|Edge')
 
 modify(type='*' where=wnd.parent.name=='DirectUIHWND' && this.title=='Top'
 	image=icon.scroll_top)
