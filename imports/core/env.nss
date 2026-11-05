@@ -15,11 +15,16 @@ $wScale = if(wnd.name == 'SystemTray_Main' || wnd.is_start, 1.1, 1)
 $core   = '@app.dir\imports\core\'
 $feat   = '@app.dir\imports\features\'
 $mods   = '@app.dir\imports\features\modules\'
+$items   = '@app.dir\imports\features\modules\items\'
 $scrpt  = '@app.dir\imports\features\modules\scripts\'
 
 // Scripts
 $nvcnt = path.combine($scrpt, 'nvcnt.ps1')
 $short = path.combine($scrpt, 'shortcut.ps1')
+$viewps = path.combine($scrpt, 'viewpreset.ps1')
+
+// Data
+$views_ini = path.combine($mods, 'views.ini')
 
 
 // Local Paths ---------------------------------------------------------------
@@ -37,11 +42,17 @@ $cmd_nvcpl    = path.combine($portable, 'NVIDIA ControlPanel', 'nvcplui.exe')
 $cmd_pwsh     = path.combine(sys.prog, 'PowerShell', '7', 'pwsh.exe')
 $cmd_vscodium = path.combine(sys.prog, 'VSCodium', 'VSCodium.exe')
 
+// Everything - first existing install, '' if none
+$ev_64_alpha    = path.combine(sys.prog, 'Everything 1.5a', 'Everything.exe')
+$ev_64          = path.combine(sys.prog, 'Everything', 'Everything.exe')
+$ev_32          = path.combine(sys.prog32, 'Everything', 'Everything.exe')
+$cmd_everything = if(path.exists($ev_64_alpha), $ev_64_alpha, if(path.exists($ev_64), $ev_64, if(path.exists($ev_32), $ev_32, '')))
+
 
 // --- Registry Keys ---------------------------------------------------------
 $reg_explorer = 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\'
 $reg_advanced = $reg_explorer + 'Advanced'
-
+$reg_opstatus = $reg_explorer + 'OperationStatusManager'
 
 // --- Keys ------------------------------------------------------------------
 $mkeyANY    = key.shift() || key.control()

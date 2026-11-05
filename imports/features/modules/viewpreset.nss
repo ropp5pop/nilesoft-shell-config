@@ -6,4 +6,5 @@ menu(title='View preset' type='back.dir' where=!wnd.is_desktop image=icon.detail
 {
 	item(title='Main'  window=hidden cmd='powershell.exe' args=vp_args + ' -Hwnd ' + wnd.handle + ' -Preset Main')
 	item(title='Audio' window=hidden cmd='powershell.exe' args=vp_args + ' -Hwnd ' + wnd.handle + ' -Preset Audio')
+	item(title='Image' window=hidden cmd='powershell.exe' args=vp_args + ' -Hwnd ' + wnd.handle + ' -Preset Image')
 }
