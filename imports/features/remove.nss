@@ -13,7 +13,6 @@ remove(mode=mode.multiple
     id.open,
     id.play,
     id.print,
-    id.redo,
     id.refresh,
     id.rename,
     id.restore,
