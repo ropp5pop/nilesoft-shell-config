@@ -10,7 +10,7 @@ Basic UI/UX guidelines.
 
 - ### Theme
   - **.background**
-    - <span style="background-color: #141a22; border: 1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;</span> `#d0c4bc` .color
+    - <span style="background-color: #141a22; border: 1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;</span> `#141a22` .color
     - <span style="background-color: #000000; border: 1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;</span> `#000000` .color `SystemTray_Main`
       <br>
   - **.item**

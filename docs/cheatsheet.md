@@ -9,7 +9,7 @@ Some help for further development.
 ## Snippets
 
 - **If this or this:**
-  [env.nss](../imports/core/env.nss#L12) _(Line: 12)_
+  [env.nss](../imports/core/env.nss#L11) _(Line: 11)_
   - `$wScale = if(wnd.name == 'SystemTray_Main' || wnd.is_start, 1.1, 1)`
     <br>
 
@@ -19,8 +19,8 @@ Some help for further development.
     <br>
 
 - **Wrap in double-quotes at runtime to support spaces in filenames etc.:**
-  [new.nss](../imports/features/new.nss#L6) _(Line: 6)_
-  - `args='"' + @sel.file.name + '"'`
+  [new.nss](../imports/features/new.nss#L18) _(Line: 18)_
+  - `args='"@sel.path"'`
     <br>
 
 ### Code Format/Style Conventions
@@ -43,6 +43,6 @@ Some help for further development.
     where=path.exists($cmd_vscodium)
     vis=$mkeyANY
     cmd=$cmd_vscodium
-    args='"' + @sel.file.name + '"'
+    args='"@sel.path"'
   )
   ```
